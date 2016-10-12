@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Taylor 2.0</title>
+        
+        <meta name="author" content="Masconsultores.cl">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-switch.css">
+        <link rel="stylesheet" href="css/bootstrap-glyphicons.css" />
+        <link rel="stylesheet" href="css/datepicker3.css" />
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/modernizr.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<div class="wrapper_header">
+			<div class="header">
+	        	<div class="col-lg-1">
+	        		<div class="logo"></div>
+	        	</div>
+	        	<div class="col-lg-8">
+	        		<ul class="menu menu-top">
+	        		<li><a href="index.html">Ingreso de Horas</a></li>
+	        		<li><a href="reportes.html">Reportes</a></li>
+	        		<li class="dropdown">
+	        			<a id="menu-solicitudes" href="#" class="dropdown-toggle current" data-toggle="dropdown" role="button">Solicitudes <b class="caret"></b></a>
+	        			<ul class="dropdown-menu" aria-labelledby="menu-solicitudes">
+			          		<li><a href="solicitudes_cp.html">Centro de Proyectos</a></li>
+			          		<li><a class="current" href="solicitudes_ip.html">Ingreso de Personas</a></li>
+			          		<li><a href="solicitudes_df.html">Facturación</a></li>
+			          		<li><a href="solicitudes_td.html">Tarjeta Delivery</a></li>
+			        	</ul>
+	        		</li>
+	        		<li><a href="tips.html">Tips</a></li>
+	        		<li><a href="instructivo.html">Instructivo</a></li>
+	        	</ul>
+	        	</div>
+	        	<div class="col-lg-3">
+	        		<ul class="menu menu-top pull-right">
+				      	<li class="dropdown">
+				        	<a id="menu-perfil" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Usuario <b class="caret"></b></a>
+				        	<ul class="dropdown-menu" aria-labelledby="menu-perfil">
+				          		<li><a href="perfil.html">Perfil</a></li>
+				          		<li><a href="logout.html">Salir</a></li>
+				        	</ul>
+				      	</li>
+				    </ul>
+	        	</div>
+	        </div>
+		</div>
+		
+		<div class="content">
+			<div class="menu-left col-lg-3">
+				<ul id="menu-left" class="menu pull-right">
+					<li>
+						<a href="solicitudes_cp.html">Centro de Proyectos</a>
+					</li>
+					<li class="current">
+						<a href="solicitudes_ip.html">Ingreso de Personas</a>
+					</li>
+					<li>
+						<a href="solicitudes_df.html">Facturación</a>
+					</li>
+					<li>
+						<a href="solicitudes_td.html">Tarjeta Delivery</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contenido col-lg-9">
+				<h2>Ficha de Ingreso de Trabajador</h2>
+				<h3>Masconsultores / Mascapacitación</h3>
+				<form class="form-horizontal" role="form">
+					
+					<!-- DATOS PERSONALES -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Datos Personales</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					    	<div class="form-group row">
+						    	<label for="nombre" class="col-sm-6 control-label">Nombre</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="nombre" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="rut" class="col-sm-6 control-label">Cédula de Identidad</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="rut" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="fechanac" class="col-sm-6 control-label">Fecha de Nacimiento</label>
+						    	<div class="col-sm-5 input-group">
+						      		<input type="text" class="form-control" id="fechanac" />
+						      		<span class="input-group-addon">
+								  		<span class="glyphicon glyphicon-calendar"></span>
+								  	</span>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="direccion" class="col-sm-6 control-label">Dirección</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="direccion" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="telefono" class="col-sm-6 control-label">Teléfono</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="telefono" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="contemerg" class="col-sm-6 control-label">Contacto de Emergencia (nombre/teléfono)</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="contemerg" />
+						    	</div>
+						  	</div>
+					  	</div>
+					</div>
+					
+					<!-- INFORMACION DE AREA -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Información área a la cuál ingresa</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					    	<div class="form-group row">
+						    	<label for="cargo" class="col-sm-6 control-label">Cargo</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="cargo" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="area" class="col-sm-6 control-label">Área</label>
+						    	<div class="col-sm-5">
+						      		<select id="area" class="form-control">
+									  	<option>1</option>
+									  	<option>2</option>
+									  	<option>3</option>
+									  	<option>4</option>
+									  	<option>5</option>
+									</select>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="jefe" class="col-sm-6 control-label">Supervisor directo o Gerente a cargo</label>
+						    	<div class="col-sm-5">
+						      		<select id="jefe" class="form-control">
+									  	<option>1</option>
+									  	<option>2</option>
+									  	<option>3</option>
+									  	<option>4</option>
+									  	<option>5</option>
+									</select>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="email" class="col-sm-6 control-label">Correo electrónico asignado</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="email" />
+						    	</div>
+						  	</div>
+					  	</div>
+					</div>
+					
+					<!-- INFORMACION DE PAGO -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Información de pago de remuneraciones</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					  		<div class="form-group row">
+						    	<label for="formapago" class="col-sm-6 control-label">Forma de pago</label>
+						    	<div class="col-sm-5">
+						      		<select id="formapago" class="form-control">
+									  	<option>1</option>
+									  	<option>2</option>
+									  	<option>3</option>
+									  	<option>4</option>
+									  	<option>5</option>
+									</select>
+						    	</div>
+						  	</div>
+					    	<div class="form-group row">
+						    	<label for="banco" class="col-sm-6 control-label">Banco</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="banco" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="tipocuenta" class="col-sm-6 control-label">Tipo de cuenta</label>
+						    	<div class="col-sm-5">
+						      		<select id="tipocuenta" class="form-control">
+									  	<option>1</option>
+									  	<option>2</option>
+									  	<option>3</option>
+									  	<option>4</option>
+									  	<option>5</option>
+									</select>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="nrocuenta" class="col-sm-6 control-label">Número de cuenta</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="nrocuenta" />
+						    	</div>
+						  	</div>
+					  	</div>
+					</div>
+					
+					<!-- CONDICIONES CONTRACTUALES -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Condiciones contractuales</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					  		<div class="form-group row">
+						    	<label for="empresa" class="col-sm-6 control-label">Empresa que contrata</label>
+						    	<div class="col-sm-5">
+						      		<select id="empresa" class="form-control">
+									  	<option>Instituto ROI</option>
+									  	<option>Mas Capacitación</option>
+									  	<option>Mas Consultores</option>
+									</select>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="tipocontrato" class="col-sm-6 control-label">Tipo de contrato</label>
+						    	<div class="col-sm-5">
+						      		<select id="tipocontrato" class="form-control">
+									  	<option>Honorarios</option>
+									  	<option>Plazo fijo</option>
+									  	<option>Plazo indefinido</option>
+									</select>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="fechaingreso" class="col-sm-6 control-label">Fecha de ingreso</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="fechaingreso" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="fechaingreso" class="col-sm-6 control-label">Fecha termino (contrato plazo fijo/honorarios)</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="fechaingreso" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="colacion" class="col-sm-6 control-label">(*)Asignación colación</label>
+						    	<div class="col-sm-5">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="colacion" type="checkbox">
+								    </div>
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="movilizacion" class="col-sm-6 control-label">(*)Asignación movilización</label>
+						    	<div class="col-sm-5">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="movilizacion" type="checkbox">
+								    </div>
+						    	</div>
+						  	</div>					    	
+					  	</div>
+					</div>
+					
+					<!-- DOCUMENTACION A SOLICITAR -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Documentación a solicitar</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					  		<div class="well well-sm">Documentos oblitagatorios</div>
+					  		<div class="form-group">
+						    	<label for="curriculum" class="col-sm-6 control-label">Curriculum</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="curriculum" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecurriculum">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="fotocedula" class="col-sm-6 control-label">Fotocopia cédula identidad</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="fotocedula" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filefotocedula">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="certisapre" class="col-sm-6 control-label">(*)Certificado afiliación isapre</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="certisapre" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="certafp" class="col-sm-6 control-label">(*)Certificado afiliación AFP</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="certafp" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="certtitprof" class="col-sm-6 control-label">(*)Certificado título profesional</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="certtitprof" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+						  	
+						  	<div class="well well-sm">Documentos optativos</div>
+						  	<div class="form-group">
+						    	<label for="certant" class="col-sm-6 control-label">(*)Certificado antecedentes</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="certant" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="dicom" class="col-sm-6 control-label">(*)Dicom</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="dicom" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="finiquito" class="col-sm-6 control-label">(*)Finiquito antiguo empleador</label>
+						    	<div class="col-sm-2">
+						      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+								    	<input id="finiquito" type="checkbox">
+								    </div>
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="otrosdoc" class="col-sm-6 control-label">Otros (Especificar)</label>
+						    	<div class="col-sm-2">
+						      		<input type="text" class="form-control" id="otrosdoc" />
+						    	</div>
+						    	<div class="col-sm-4">
+						      		<input type="file" id="filecertisapre">
+						    	</div>
+						  	</div>
+					  	</div>
+					</div>
+					
+					<div class="form-group">
+				    	<div class="col-sm-12">
+				      		<button type="submit" class="btn btn-default pull-right">Enviar</button>
+				    	</div>
+				  	</div>
+			  	</form>
+			</div>
+		</div>
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-switch.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+    	<script src="js/locales/bootstrap-datepicker.es.js"></script>
+        <script src="js/cf.js"></script>
+        
+       	<script type="text/javascript">
+	        $(function() {
+	            var offset = $("#menu-left").offset();
+	            var topPadding = 50;
+	            $(window).scroll(function() {
+	                if ($(window).scrollTop() > offset.top) {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: $(window).scrollTop() - offset.top + topPadding
+	                    }, 100);
+	                } else {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: 25
+	                    }, 100);
+	                };
+	            });
+	        });
+	        
+	        /* DATEPICKER */
+	        $('#fechanac').datepicker({
+			    format: "dd/mm/yyyy",
+			    startView: 2,
+			    language: "es",
+			    autoclose: true,
+			    todayHighlight: true
+		    });
+	    </script>
+
+    </body>
+</html>

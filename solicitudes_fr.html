@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Taylor 2.0</title>
+        
+        <meta name="author" content="Masconsultores.cl">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-switch.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/modernizr.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<div class="wrapper_header">
+			<div class="header">
+	        	<div class="col-lg-1">
+	        		<div class="logo"></div>
+	        	</div>
+	        	<div class="col-lg-8">
+	        		<ul class="menu menu-top">
+	        		<li><a href="index.html">Ingreso de Horas</a></li>
+	        		<li><a href="reportes.html">Reportes</a></li>
+	        		<li class="dropdown">
+	        			<a id="menu-solicitudes" href="#" class="dropdown-toggle current" data-toggle="dropdown" role="button">Solicitudes <b class="caret"></b></a>
+	        			<ul class="dropdown-menu" aria-labelledby="menu-solicitudes">
+			          		<li><a href="solicitudes_cp.html">Centro de Proyectos</a></li>
+			          		<li><a href="solicitudes_ip.html">Ingreso de Personas</a></li>
+			          		<li><a class="current" href="solicitudes_fr.html">Formulario de Rendición</a></li>
+			          		<li><a href="solicitudes_td.html">Tarjeta Delivery</a></li>
+			        	</ul>
+	        		</li>
+	        		<li><a href="tips.html">Tips</a></li>
+	        		<li><a href="instructivo.html">Instructivo</a></li>
+	        	</ul>
+	        	</div>
+	        	<div class="col-lg-3">
+	        		<ul class="menu menu-top pull-right">
+				      	<li class="dropdown">
+				        	<a id="menu-perfil" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Usuario <b class="caret"></b></a>
+				        	<ul class="dropdown-menu" aria-labelledby="menu-perfil">
+				          		<li><a href="perfil.html">Perfil</a></li>
+				          		<li><a href="logout.html">Salir</a></li>
+				        	</ul>
+				      	</li>
+				    </ul>
+	        	</div>
+	        </div>
+		</div>
+		
+		<div class="content">
+			<div class="menu-left col-lg-3">
+				<ul id="menu-left" class="menu pull-right">
+					<li>
+						<a href="solicitudes_cp.html">Centro de Proyectos</a>
+					</li>
+					<li>
+						<a href="solicitudes_ip.html">Ingreso de Personas</a>
+					</li>
+					<li class="current">
+						<a href="solicitudes_fr.html">Formulario de Rendición</a>
+					</li>
+					<li>
+						<a href="solicitudes_td.html">Tarjeta Delivery</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contenido col-lg-9">
+				<h2>Rendición de Gastos</h2>
+				<form class="form-horizontal" role="form">
+					<!-- DATOS PERSONALES -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Datos de rendición</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					    	<div class="form-group row">
+						    	<label for="nombre" class="col-sm-6 control-label">Nombre</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="nombre" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="cliente" class="col-sm-6 control-label">Cliente</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="cliente" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="fechanac" class="col-sm-6 control-label">Centro de proyectos</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="cp" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="direccion" class="col-sm-6 control-label">Empresa</label>
+						    	<div class="col-sm-5">
+								  	<select id="empresa" class="form-control">
+									  	<option>Mas Capacitación</option>
+									  	<option>Mas Consultores</option>
+									</select>
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="fecha" class="col-sm-6 control-label">Fecha</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="fecha" />
+						    	</div>
+						  	</div>
+					  	</div>
+					</div>
+
+					<table class="table table-striped rendicion">
+						<thead>
+							<tr>
+								<th class="fechagasto">Concepto de gasto</th>
+								<th>Fecha</th>
+								<th>Pasajes</th>
+								<th>Hotel</th>
+								<th>Comida</th>
+								<th>Taxi</th>
+								<th>Propina</th>
+								<th>Bencina</th>
+								<th>Otros</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="gasto">
+							<tr>
+								<td>
+									<input type="text" class="form-control" id="concgasto" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="fechagasto" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="pasajes" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="hotel" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="comida" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="taxi" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="propina" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="bencina" />
+								</td>
+								<td>
+									<input type="text" class="form-control" id="otros" />
+								</td>
+								<td class="acciones">
+									<b></b>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<button id="addScnt" type="button" class="btn btn-default"><b>+</b> Agregar otro concepto</button>
+					<br><br>
+					<!--
+					<div class="form-group row">
+				    	<label for="nombregasto" class="col-sm-6 control-label">Concepto gasto</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="nombregasto" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="fecha" class="col-sm-6 control-label">Fecha</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="fecha" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="pasajes" class="col-sm-offset-1 col-sm-5 control-label">Pasajes</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="pasajes" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="hotel" class="col-sm-offset-1 col-sm-5 control-label">Hotel</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="hotel" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="comida" class="col-sm-offset-1 col-sm-5 control-label">Comida</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="comida" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="taxi" class="col-sm-offset-1 col-sm-5 control-label">Taxi</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="taxi" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="propina" class="col-sm-offset-1 col-sm-5 control-label">Propina</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="propina" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="bencina" class="col-sm-offset-1 col-sm-5 control-label">Bencina</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="bencina" />
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+				    	<label for="otros" class="col-sm-offset-1 col-sm-5 control-label">Otros</label>
+				    	<div class="col-sm-5">
+				      		<input type="text" class="form-control" id="otros" />
+				    	</div>
+				  	</div>
+				  	
+				  -->
+		
+					<div class="form-group">
+				    	<div class="col-sm-12">
+				      		<button type="submit" class="btn btn-default">Enviar</button>
+				    	</div>
+				  	</div>
+			  	</form>
+			</div>
+		</div>
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-switch.min.js"></script>
+        <script src="js/cf.js"></script>
+        
+       	<script type="text/javascript">
+	        $(function() {
+	            var offset = $("#menu-left").offset();
+	            var topPadding = 50;
+	            $(window).scroll(function() {
+	                if ($(window).scrollTop() > offset.top) {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: $(window).scrollTop() - offset.top + topPadding
+	                    }, 100);
+	                } else {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: 25
+	                    }, 100);
+	                };
+	            });
+	        });
+	        $(function() {
+		        var scntDiv = $('#gasto');
+		        var i = $('#gasto tr').size() + 1;
+		        
+		        $('#addScnt').live('click', function() {
+	                $('<tr>' +
+	                	'<td>' +
+	                		'<input type="text" class="form-control" id="concgasto' + i + '" />' +
+	                	'</td>' +
+	                	'<td>' +
+	                		'<input type="text" class="form-control" id="fechagasto' + i + '" />' +
+	                	'</td>' +
+	                	'<td>' +
+							'<input type="text" class="form-control" id="pasajes' + i + '" />' +
+						'</td>' +
+						'<td>' +
+							'<input type="text" class="form-control" id="hotel' + i + '" />' +
+						'</td>' +
+						'<td>' +
+							'<input type="text" class="form-control" id="comida' + i + '" />' +
+						'</td>' +
+						'<td>' +
+							'<input type="text" class="form-control" id="taxi' + i + '" />' +
+						'</td>' +
+						'<td>' +
+							'<input type="text" class="form-control" id="propina' + i + '" />' +
+						'</td>' +
+						'<td>' +
+							'<input type="text" class="form-control" id="bencina' + i + '" />' +
+						'</td>' +
+						'<td>' +
+							'<input type="text" class="form-control" id="otros' + i + '" />' +
+						'</td>' +
+	                	'<td class="acciones">' +
+	                		'<a href="#" id="remScnt"><b>X</b></a>' +
+	                		'</td>' +
+	                '</tr>').appendTo(scntDiv);
+	                i++;
+	                return false;
+		        });
+		        
+		        $('#remScnt').live('click', function() { 
+	                if( i > 2 ) {
+	                        $(this).parents('tr').remove();
+	                        i--;
+	                }
+	                return false;
+		        });
+			});
+	    </script>
+    </body>
+</html>

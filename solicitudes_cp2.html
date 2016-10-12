@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Taylor 2.0</title>
+        
+        <meta name="author" content="Masconsultores.cl">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/bootstrap-switch.css" />
+        <link rel="stylesheet" href="css/bootstrap-modal-bs3patch.css" />
+  		<link rel="stylesheet" href="css/bootstrap-modal.css" />
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/modernizr.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<div class="wrapper_header">
+			<div class="header">
+	        	<div class="col-lg-1">
+	        		<div class="logo"></div>
+	        	</div>
+	        	<div class="col-lg-8">
+	        		<ul class="menu menu-top">
+	        		<li><a href="index.html">Ingreso de Horas</a></li>
+	        		<li><a href="reportes.html">Reportes</a></li>
+	        		<li class="dropdown">
+	        			<a id="menu-solicitudes" href="#" class="dropdown-toggle current" data-toggle="dropdown" role="button">Solicitudes <b class="caret"></b></a>
+	        			<ul class="dropdown-menu" aria-labelledby="menu-solicitudes">
+			          		<li><a class="current" href="solicitudes_cp.html">Centro de Proyectos</a></li>
+			          		<li><a href="solicitudes_ip.html">Ingreso de Personas</a></li>
+			          		<li><a href="solicitudes_fr.html">Formulario de Rendición</a></li>
+			          		<li><a href="solicitudes_td.html">Tarjeta Delivery</a></li>
+			        	</ul>
+	        		</li>
+	        		<li><a href="tips.html">Tips</a></li>
+	        		<li><a href="instructivo.html">Instructivo</a></li>
+	        	</ul>
+	        	</div>
+	        	<div class="col-lg-3">
+	        		<ul class="menu menu-top pull-right">
+				      	<li class="dropdown">
+				        	<a id="menu-perfil" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Usuario <b class="caret"></b></a>
+				        	<ul class="dropdown-menu" aria-labelledby="menu-perfil">
+				          		<li><a href="perfil.html">Perfil</a></li>
+				          		<li><a href="logout.html">Salir</a></li>
+				        	</ul>
+				      	</li>
+				    </ul>
+	        	</div>
+	        </div>
+		</div>
+		
+		<div class="content">
+			<div class="menu-left col-lg-3">
+				<ul id="menu-left" class="menu pull-right">
+					<li class="current">
+						<a href="solicitudes_cp.html">Centro de Proyectos</a>
+					</li>
+					<li>
+						<a href="solicitudes_ip.html">Ingreso de Personas</a>
+					</li>
+					<li>
+						<a href="solicitudes_fr.html">Formulario de Rendición</a>
+					</li>
+					<li>
+						<a href="solicitudes_td.html">Tarjeta Delivery</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contenido col-lg-9">
+				<h2>Ficha Solicitud de Centro de Proyectos</h2>
+				<br>
+				<a href="#myModal" class="btn btn-default" data-toggle="modal" role="button">Agregar Centro de Proyectos</a>
+				
+				<!-- MODAL INGRESO CP -->
+				
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Solicitud de Centro de Proyectos</h4>
+						</div>
+						<div class="modal-body">
+							<div class="panel panel-default">
+							  	<!-- Default panel contents -->
+							  	<form class="form-horizontal" role="form">
+								  	<div class="form-group">
+								    	<label for="cliente" class="col-sm-6 control-label">Clientes</label>
+								    	<div class="col-sm-5">
+								      		<select id="cliente" class="form-control">
+											  	<option>1</option>
+											  	<option>2</option>
+											  	<option>3</option>
+											  	<option>4</option>
+											  	<option>5</option>
+											</select>
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="nombreproyecto" class="col-sm-6 control-label">Nombre de Proyecto</label>
+								    	<div class="col-sm-5">
+								      		<input type="text" class="form-control" id="nombreproyecto">
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="fechasolicitud" class="col-sm-6 control-label">Fecha de Solicitud</label>
+								    	<div class="col-sm-5">
+								      		<input type="text" class="form-control" id="fechasolicitud">
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="coorproyecto" class="col-sm-6 control-label">Director/Coordinador de Proyecto</label>
+								    	<div class="col-sm-5">
+								      		<select id="coorproyecto" class="form-control">
+											  	<option>1</option>
+											  	<option>2</option>
+											  	<option>3</option>
+											  	<option>4</option>
+											  	<option>5</option>
+											</select>
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="gerproyecto" class="col-sm-6 control-label">Gerente</label>
+								    	<div class="col-sm-5">
+								      		<select id="gerproyecto" class="form-control">
+											  	<option>1</option>
+											  	<option>2</option>
+											  	<option>3</option>
+											  	<option>4</option>
+											  	<option>5</option>
+											</select>
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="areatematica" class="col-sm-6 control-label">Área Temática</label>
+								    	<div class="col-sm-5">
+								      		<select id="areatematica" class="form-control">
+											  	<option>1</option>
+											  	<option>2</option>
+											  	<option>3</option>
+											  	<option>4</option>
+											  	<option>5</option>
+											</select>
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="ActivityHours" class="col-sm-6 control-label">Horas Estimadas</label>
+								    	<div class="col-lg-5 row">
+								    		<div class="col-sm-6">
+									      		<select id="ActivityHours" class="form-control">
+												  	<option>1</option>
+												  	<option>2</option>
+												  	<option>3</option>
+												  	<option>4</option>
+												  	<option>5</option>
+												</select>
+											</div>
+											<div class="col-sm-6">
+									      		<select id="activityMinutes" class="form-control">
+												  	<option>1</option>
+												  	<option>2</option>
+												  	<option>3</option>
+												  	<option>4</option>
+												  	<option>5</option>
+												</select>
+											</div>
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="sence" class="col-sm-6 control-label">Sence</label>
+								    	<div class="col-sm-5">
+								      		<div id="animated-switch" class="make-switch" data-on-label="SI" data-off-label="NO" data-animated="true">
+										    	<input id="sence" type="checkbox" checked>
+										    </div>
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="montofacturacion" class="col-sm-6 control-label">Monto Total Facturación</label>
+								    	<div class="col-sm-5">
+								      		<input type="text" class="form-control" id="montofacturacion">
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label for="fechaestfact" class="col-sm-6 control-label">Fecha Estimada Facturación (detalle mensual)</label>
+								    	<div class="col-sm-5">
+								      		<input type="text" class="form-control" id="fechaestfact">
+								    	</div>
+								  	</div>
+								  	
+								  	<div class="form-group">
+								    	<div class="col-sm-3 col-sm-offset-9">
+								      		<button id="next" type="submit" class="btn btn-default">Enviar</button>
+								    	</div>
+								  	</div>
+								</form>
+							</div>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+				
+				<!-- TABLA CP -->
+				<br><br>
+				<table class="table table-striped solicitudes">
+					<thead>
+						<tr>
+							<th class="codigo">Código</th>
+							<th>Nombre</th>
+							<th>Responsable</th>
+							<th>Área</th>
+							<th>Cliente</th>
+							<th class="acciones">Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>MS12001</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>
+            					<a class="detalles" data-toggle="modal" data-user="500" href="#">Detalles</a>
+            					<a class="editar" data-toggle="modal" data-user="500" href="#">Editar</a>
+            					<a href="#">Borrar</a>
+            				</td>
+						</tr>
+						<tr>
+							<td>MS12001</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>
+								<a class="detalles" data-toggle="modal" data-user="501" href="#">Detalles</a>
+            					<a class="editar" data-toggle="modal" data-user="501" href="#">Editar</a>
+            					<a href="#">Borrar</a>	
+							</td>
+						</tr>
+						<tr>
+							<td>MS12001</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>asdasdasd</td>
+							<td>
+								<a class="detalles" data-toggle="modal" data-user="502" href="#">Detalles</a>
+            					<a class="editar" data-toggle="modal" data-user="502" href="#">Editar</a>
+            					<a href="#">Borrar</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+        
+		<div id="ajax-modal" class="modal fade" tabindex="-1" style="display: none;"></div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-switch.min.js"></script>
+        <script src="js/bootstrap-modalmanager.js"></script>
+    	<script src="js/bootstrap-modal.js"></script>
+        <script src="js/cf.js"></script>
+        
+        <script>
+        	
+	        $(function() {
+	            var offset = $("#menu-left").offset();
+	            var topPadding = 50;
+	            $(window).scroll(function() {
+	                if ($(window).scrollTop() > offset.top) {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: $(window).scrollTop() - offset.top + topPadding
+	                    }, 100);
+	                } else {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: 25
+	                    }, 100);
+	                };
+	            });
+	        });
+
+        </script>
+        <script id="ajax" type="text/javascript">
+
+			$(function(){
+				$.fn.modal.defaults.spinner = $.fn.modalmanager.defaults.spinner = 
+			      '<div class="loading-spinner" style="width: 200px; margin-left: -100px;">' +
+			        '<div class="progress progress-striped active">' +
+			          '<div class="progress-bar" style="width: 100%;"></div>' +
+			        '</div>' +
+			      '</div>';
+			});
+			
+			var $modal = $('#ajax-modal');
+			
+			$('.detalles').on('click', function(){
+				$userid = $(this).attr('data-user');
+			  	// create the backdrop and wait for next modal to be triggered
+			  	$('body').modalmanager('loading');
+			
+			  	setTimeout(function(){
+			  		$modal.load('detalles.php', 'userid=' + $userid, function(){
+			      		$modal.modal();
+			      		$('#animated-switch').bootstrapSwitch('destroy');
+			    	});
+			  	}, 200);
+			});
+			
+			   $(document).ajaxComplete(function(event, xhr, settings) {
+			      $('.make-switch').each(function(index, elem) {
+			         //Initialize all switches if they haven't been already
+			         if (!$(elem).hasClass('has-switch')) {
+			            $(elem).bootstrapSwitch();
+			         }
+			      });
+			   });
+
+			
+			$('.editar').on('click', function(){
+			
+			});
+
+
+			$('#next').on('click', function(){
+				$userid = $(this).attr('data-user');
+			  	// create the backdrop and wait for next modal to be triggered
+			  	$('body').modalmanager('loading');
+			
+			  	setTimeout(function(){
+			  		$modal.load('editar.php', 'userid=' + $userid, function(){
+			      		$modal.modal();
+			      	
+			    	});
+			  	}, 200);
+				return false;
+			});
+
+		</script> 
+
+    </body>
+</html>

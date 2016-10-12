@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Taylor 2.0</title>
+        
+        <meta name="author" content="Masconsultores.cl">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-switch.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/modernizr.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		<div class="wrapper_header">
+			<div class="header">
+	        	<div class="col-lg-1">
+	        		<div class="logo"></div>
+	        	</div>
+	        	<div class="col-lg-8">
+	        		<ul class="menu menu-top">
+	        		<li><a href="index.html">Ingreso de Horas</a></li>
+	        		<li><a href="reportes.html">Reportes</a></li>
+	        		<li class="dropdown">
+	        			<a id="menu-solicitudes" href="#" class="dropdown-toggle current" data-toggle="dropdown" role="button">Solicitudes <b class="caret"></b></a>
+	        			<ul class="dropdown-menu" aria-labelledby="menu-solicitudes">
+			          		<li><a href="solicitudes_cp.html">Centro de Proyectos</a></li>
+			          		<li><a href="solicitudes_ip.html">Ingreso de Personas</a></li>
+			          		<li><a class="current" href="solicitudes_df.html">Facturación</a></li>
+			          		<li><a href="solicitudes_td.html">Tarjeta Delivery</a></li>
+			        	</ul>
+	        		</li>
+	        		<li><a href="tips.html">Tips</a></li>
+	        		<li><a href="instructivo.html">Instructivo</a></li>
+	        	</ul>
+	        	</div>
+	        	<div class="col-lg-3">
+	        		<ul class="menu menu-top pull-right">
+				      	<li class="dropdown">
+				        	<a id="menu-perfil" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Usuario <b class="caret"></b></a>
+				        	<ul class="dropdown-menu" aria-labelledby="menu-perfil">
+				          		<li><a href="perfil.html">Perfil</a></li>
+				          		<li><a href="logout.html">Salir</a></li>
+				        	</ul>
+				      	</li>
+				    </ul>
+	        	</div>
+	        </div>
+		</div>
+		
+		<div class="content">
+			<div class="menu-left col-lg-3">
+				<ul id="menu-left" class="menu pull-right">
+					<li>
+						<a href="solicitudes_cp.html">Centro de Proyectos</a>
+					</li>
+					<li>
+						<a href="solicitudes_ip.html">Ingreso de Personas</a>
+					</li>
+					<li class="current">
+						<a href="solicitudes_df.html">Facturación</a>
+					</li>
+					<li>
+						<a href="solicitudes_td.html">Tarjeta Delivery</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contenido col-lg-9">
+				<h2>Solicitud de facturación</h2>
+				<form class="form-horizontal" role="form">
+					
+					<!-- DATOS PERSONALES -->
+					
+					<div class="panel panel-default">
+					  	<div class="panel-heading">
+					  		<h3 class="panel-title">Datos Personales</h3>
+					  	</div>
+				  	
+					  	<div class="panel-body">
+					    	<div class="form-group row">
+						    	<label for="glosa" class="col-sm-6 control-label">Glosa</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="glosa" />
+						    	</div>
+						  	</div>
+						  	<div class="form-group row">
+						    	<label for="monto" class="col-sm-6 control-label">Monto</label>
+						    	<div class="col-sm-5">
+						      		<input type="text" class="form-control" id="monto" />
+						    	</div>
+						  	</div>
+						  	<fieldset id="" class="">
+								<legend>Datos clientes</legend>
+								<div class="form-group row">
+							    	<label for="rsocial" class="col-sm-6 control-label">Razón social</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="rsocial" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="rut" class="col-sm-6 control-label">RUT</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="rut" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="giro" class="col-sm-6 control-label">Giro</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="giro" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="direccion" class="col-sm-6 control-label">Dirección</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="direccion" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="telefono" class="col-sm-6 control-label">Teléfono</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="telefono" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="cp" class="col-sm-6 control-label">Centro de proyectos</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="cp" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="ocompra" class="col-sm-6 control-label">Orden de compra</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="ocompra" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="rdocumento" class="col-sm-6 control-label">Receptor del documento</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="rdocumento" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="mrdocumento" class="col-sm-6 control-label">Mail receptor del documento</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="mrdocumento" />
+							    	</div>
+							  	</div>
+							</fieldset>
+							<br>
+							<fieldset id="" class="">
+								<legend>Información interna</legend>
+								<div class="form-group row">
+							    	<label for="fecha" class="col-sm-6 control-label">Fecha de solicitud</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="fecha" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="facturar" class="col-sm-6 control-label">Facturar por</label>
+							    	<div class="col-sm-5">
+							      		<select id="facturar" class="form-control">
+										  	<option>Instituto ROI</option>
+										  	<option>Mas Capacitación</option>
+										  	<option>Mas Consultores</option>
+										</select>
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="cliente" class="col-sm-6 control-label">Cliente</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="cliente" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="cpproyecto" class="col-sm-6 control-label">CP Proyecto</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="cpproyecto" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="nsfactura" class="col-sm-6 control-label">Nombre de quien solicita esta facturación</label>
+							    	<div class="col-sm-5">
+							      		<input type="text" class="form-control" id="nsfactura" />
+							    	</div>
+							  	</div>
+							  	<div class="form-group row">
+							    	<label for="cp" class="col-sm-6 control-label">Observaciones</label>
+							    	<div class="col-sm-5">
+							      		<textarea type="text" class="form-control" id="cp"></textarea>
+							    	</div>
+							  	</div>
+							</fieldset>
+					  	</div>
+					</div>
+					<div class="form-group">
+				    	<div class="col-sm-12">
+				      		<button type="submit" class="btn btn-default pull-right">Enviar</button>
+				    	</div>
+				  	</div>
+			  	</form>
+			</div>
+		</div>
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-switch.min.js"></script>
+        <script src="js/cf.js"></script>
+        
+       	<script type="text/javascript">
+	        $(function() {
+	            var offset = $("#menu-left").offset();
+	            var topPadding = 50;
+	            $(window).scroll(function() {
+	                if ($(window).scrollTop() > offset.top) {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: $(window).scrollTop() - offset.top + topPadding
+	                    }, 100);
+	                } else {
+	                    $("#menu-left").stop().animate({
+	                        marginTop: 25
+	                    }, 100);
+	                };
+	            });
+	        });
+	    </script>
+
+    </body>
+</html>
